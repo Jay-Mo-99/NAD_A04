@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'profiles',
     #3rd party apps
     'crispy_forms',
+    "crispy_bootstrap4", #강좌가 아닌 디스코드에서 보면서 추가
+
 ]
 
 MIDDLEWARE = [
@@ -134,4 +136,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 #DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4" #디스코드
+CRISPY_TEMPLATE_PACK = "bootstrap4" #디스코드
 
