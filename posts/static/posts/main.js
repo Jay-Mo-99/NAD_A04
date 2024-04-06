@@ -12,6 +12,9 @@ const title = document.getElementById('id_title')
 const body = document.getElementById('id_body')
 const csrf = document.getElementsByName('csrfmiddlewaretoken')
 
+const url = window.location.href
+
+
 const alertBox = document.getElementById('alert-box')
 console.log('csrf',csrf[0].value)
 
@@ -83,7 +86,7 @@ const getData = () => {
                             <div class="card-footer">
                                 <div class="row">
                                     <div class="col-2">
-                                        <a href="#" class="btn btn-primary">Details</a>
+                                        <a href="${url}${el.id}" class="btn btn-primary">Details</a>
                                     </div>
                                     <div class="col-2">
                                         <form class="like-unlike-forms" data-form-id="${el.id}">
@@ -166,6 +169,7 @@ postForm.addEventListener('submit', e => {
             likeUnlikePosts()
             $('#addPostModal').modal('hide')
             handleAlerts('success', 'New post added!')
+            postForm.reset()
 
 
         },
