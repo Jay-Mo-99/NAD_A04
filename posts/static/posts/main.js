@@ -204,6 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  
 addBtn.addEventListener('click', ()=>{
     dropzone.classList.remove('not-visible')
 })
@@ -213,8 +214,8 @@ closeBtns.forEach(btn => btn.addEventListener('click', () => {
     if (!dropzone.classList.contains('not-visible')) {
         dropzone.classList.add('not-visible')
     }
-        const myDropzone = Dropzone.forElement("#my-dropzone");
-    myDropzone.removeAllFiles(true);
+    const myDropzone = Dropzone.forElement("#my-dropzone")
+    myDropzone.removeAllFiles(true)
 }))
 
 Dropzone.autoDiscover = false
