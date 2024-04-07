@@ -195,15 +195,26 @@ postForm.addEventListener('submit', e => {
     })
 })
 
+//This function for adjusting the carousel version 4 and bootstrap5
+document.addEventListener('DOMContentLoaded', function () {
+    var carouselElement = document.querySelector('#carouselExampleControls');
+    var carousel = new bootstrap.Carousel(carouselElement, {
+      interval: 2000,
+      wrap: true
+    });
+  });
+
 addBtn.addEventListener('click', ()=>{
     dropzone.classList.remove('not-visible')
 })
 
 closeBtns.forEach(btn => btn.addEventListener('click', () => {
-    postForm.reset();
+    postForm.reset()
     if (!dropzone.classList.contains('not-visible')) {
-        dropzone.classList.add('not-visible');
+        dropzone.classList.add('not-visible')
     }
+        const myDropzone = Dropzone.forElement("#my-dropzone");
+    myDropzone.removeAllFiles(true);
 }))
 
 Dropzone.autoDiscover = false
